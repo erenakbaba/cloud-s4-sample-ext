@@ -40,7 +40,7 @@ public class SalesOrderService {
 		if (statusCode != HttpStatus.CREATED) {
 			LOGGER.warn("Sales Order creation failed, HTTP status code: {}", statusCode);
 			throw new IllegalStateException("Unable to create a sales order. Please try again.");
-
+		}
 		return responseEntity.getBody();
 	}
 
